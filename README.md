@@ -12,7 +12,7 @@
 - **Intelligent Chat**: Users can chat with the system to get financial advice.
 
 
-## Project Structure
+## Project Back-End Structure
 ```
 backend/
 ├── src
