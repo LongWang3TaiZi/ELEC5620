@@ -1,0 +1,15 @@
+export default {
+  username: 'Username',
+  email: 'Email',
+  password: 'Password',
+  confirmPassword: 'Confirm Password',
+  verificationCode: 'Verification Code',
+  'rules-username': 'Please enter your username',
+  'rules-email': 'Please enter a valid email',
+  'rules-password': 'Password is required',
+  'rules-confirmPassword': 'Password confirmation is required',
+  'rules-passwordMatch': 'Passwords do not match',
+  register: 'Register',
+  registering: 'Registering...',
+  success: 'Registration successful',
+}
