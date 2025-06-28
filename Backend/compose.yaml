@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  postgres:
+    image: 'postgres:latest'
+    environment:
+      - POSTGRES_DB=investment_db        # 数据库名称，与 Spring Boot 配置一致
+      - POSTGRES_USER=postgres           # 数据库用户，与 Spring Boot 配置一致
+      - POSTGRES_PASSWORD=123456       # 数据库密码，与 Spring Boot 配置一致
+    ports:
+      - '5433:5432'                      # 映射本地的 5432 端口到容器内的 PostgreSQL 端口
+    volumes:
+      - postgres_data:/var/lib/postgresql/data  # 数据持久化
+
+volumes:
+  postgres_data:

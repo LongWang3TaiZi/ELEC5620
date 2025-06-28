@@ -1,0 +1,54 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.3.4'
+    id 'io.spring.dependency-management' version '1.1.6'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'org.postgresql:postgresql'
+    annotationProcessor 'org.projectlombok:lombok'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+    implementation 'cn.hutool:hutool-all:5.8.21'
+    implementation 'com.alibaba:fastjson:1.2.83'
+
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    compileOnly 'org.projectlombok:lombok'
+    runtimeOnly 'org.postgresql:postgresql'
+    annotationProcessor 'org.projectlombok:lombok'
+
+    // 添加 springdoc-openapi 依赖
+    // AI
+    implementation 'io.github.sashirestela:simple-openai:3.9.0'
+    implementation 'com.google.code.gson:gson:2.8.9'  // 版本号可以根据需要更改
+    implementation 'cn.hutool:hutool-all:5.8.21'
+    implementation 'com.alibaba:fastjson:1.2.83'
+    // 如果有其他库隐式引入 slf4j-simple，也需要排除
+    configurations.all {
+        exclude group: 'org.slf4j', module: 'slf4j-simple'
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
