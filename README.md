@@ -13,7 +13,7 @@
 
 
 ## Project Structure
-
+```
 backend/
 ├── src
 │   ├── main
@@ -33,6 +33,7 @@ backend/
 │           └── IntelligentFinancialApplicationTests.java  # Test cases
 ├── build.gradle                        # Gradle build file
 ├── settings.gradle                     # Gradle settings file
+```
 
 ## Back-End
 
